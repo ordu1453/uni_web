@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Мой сайт</title>
+
+<script>
+// Определение функции для отображения текущего времени 
+function displayTime() {
+	var element = document.getElementById("clock"); // Найти элемент с id="clock" 
+	var now = new Date();	// Получить текущее время
+	element.innerHTML = now.toLocaleTimeString(); // Отобразить его 
+	setTimeout(displayTime, 1000);	// Вызвать снова через 1 сек
+}
+
+window.onload = displayTime; // Начать отображение времени после загрузки документа
+
+function btnclk() {
+if (document.getElementById("fedor").width >= 40){
+document.getElementById("fedor").width -= 20;
+}
+else{
+document.getElementById("fedor").width = 200;
+}
+}
+
+
+function btnclk1() {
+if (document.getElementById("fedor").width <= 300){
+document.getElementById("fedor").width += 20;
+}
+else{
+document.getElementById("fedor").width = 200;
+}
+}
+
+
+</script>
+
+<style>
+
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: white;}
+</style>
+</head>
+
+<body>
+  <h1>
+    Время
+  </h1>
+<span id="clock"></span> <!-- Время выводится здесь -->
+<BUTTON onclick="alert('Кнопка нажата')" LANGUAGE="JavaScript">
+Текущее время
+</BUTTON>
+<BUTTON onclick="btnclk()">Уменьшить</BUTTON>
+<BUTTON onclick="btnclk1()">Увеличить</BUTTON>
+  <h2>
+    Кот Фёдор
+  </h2>
+   <img src="kot.jpg" id = "fedor" alt="Кот Фёдор" width="200"> 
+  <h3>
+    Не кот Фёдор
+  </h3>
+<img src="kot2.jpg" id = "fedor2" alt="Кот Фёдор" width="200"> 
+  <h4>
+    Вообще не кот Фёдор
+  </h4>
+<img src="kot3.jpg" id = "fedor3" alt="Кот Фёдор" width="200"> 
+<h4>
+    Кот Фёдор двигается
+  </h4>
+<img src="kot4.gif" id = "fedor4" alt="Кот Фёдор" width="200"> 
+  <p>
+    <strong> Кошка (лат. Felis catus) </strong>— домашнее животное, одно из наиболее популярных 
+«животных-компаньонов».<br> С точки зрения научной систематики, домашняя кошка — млекопитающее семейства 
+кошачьих отряда хищных. Одни исследователи рассматривают домашнюю 
+кошку как подвид дикой кошки, другие — как отдельный биологический вид.
+  </p>
+ <table>
+  <tr>
+    <th>Месяц</th>
+    <th>Количество</th>
+  </tr>
+  <tr>
+    <td>Январь</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Февраль</td>
+    <td>200</td>
+  </tr>
+  <tr>
+    <td>Март</td>
+    <td>300</td>
+  </tr>
+  <tr>
+    <td>Апрель</td>
+    <td>400</td>
+  </tr>
+</table> 
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
